@@ -22,7 +22,19 @@ public interface IAccountsService {
     CustomerDto fetchAccountDetails(String mobileNumber);
 
 
+    /**
+     * Updates the account details for the customer with the given mobile number.
+     *
+     * @param customerDto the customer information to update the account details from
+     * @return true if the account details are updated successfully, otherwise false
+     */
     boolean updateAccountDetails(CustomerDto customerDto);
 
+    /**
+     * Deletes the account details for the customer with the given mobile number.
+     *
+     * @param mobileNumber the mobile number to delete the account details for
+     * @return true if the account details are deleted successfully, otherwise false
+     */
     boolean deleteAccount(String mobileNumber);
 }

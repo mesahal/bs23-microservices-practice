@@ -44,6 +44,13 @@ public class AccountsServiceImpl implements IAccountsService {
         accountsRepository.save(createNewAccount(savedCustomer));
     }
 
+    /**
+     * Fetches the account details for the customer with the given mobile number.
+     *
+     * @param mobileNumber the mobile number to fetch the account details for
+     * @return a response entity containing the account details for the given mobile number
+     * @throws ResourceNotFoundException if the customer/account is not found
+     */
     @Override
     public CustomerDto fetchAccountDetails(String mobileNumber) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber)
