@@ -25,11 +25,7 @@ public class AccountsServiceImpl implements IAccountsService {
 
     private AccountsRepository accountsRepository;
     private CustomerRepository customerRepository;
-    /**
-     * Creates a new account for the given customer information.
-     *
-     * @param customerDto the customer information to create the account from
-     */
+
     @Override
     public void createAccount(CustomerDto customerDto) {
         Customer customer = CustomerMapper.mapToCustomer(customerDto, new Customer());
@@ -42,13 +38,7 @@ public class AccountsServiceImpl implements IAccountsService {
         accountsRepository.save(createNewAccount(savedCustomer));
     }
 
-    /**
-     * Fetches the account details for the customer with the given mobile number.
-     *
-     * @param mobileNumber the mobile number to fetch the account details for
-     * @return a response entity containing the account details for the given mobile number
-     * @throws ResourceNotFoundException if the customer/account is not found
-     */
+
     @Override
     public CustomerDto fetchAccount(String mobileNumber) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber)
@@ -64,12 +54,7 @@ public class AccountsServiceImpl implements IAccountsService {
 
 
 
-    /**
-     * Creates a new account instance for the given customer.
-     *
-     * @param customer the customer to create the account for
-     * @return a new account instance
-     */
+
     private Accounts createNewAccount(Customer customer) {
         Accounts newAccount = new Accounts();
         newAccount.setCustomerId(customer.getCustomerId());
@@ -81,12 +66,7 @@ public class AccountsServiceImpl implements IAccountsService {
         return newAccount;
     }
 
-    /**
-     * Updates the account details based on the given customerDto.
-     *
-     * @param customerDto the customerDto object that contains the updated account details
-     * @return true if the account details are updated successfully, otherwise false
-     */
+
     @Override
     public boolean updateAccount(CustomerDto customerDto) {
         boolean isUpdated = false;
@@ -110,10 +90,7 @@ public class AccountsServiceImpl implements IAccountsService {
     }
 
 
-    /**
-     * @param mobileNumber - Input Mobile Number
-     * @return boolean indicating if the delete of Account details is successful or not
-     */
+
     @Override
     public boolean deleteAccount(String mobileNumber) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
