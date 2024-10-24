@@ -38,8 +38,6 @@ public class AccountsServiceImpl implements IAccountsService {
         if (customerOptional.isPresent()) {
             throw new CustomerAlreadyExistException("Customer already registered with given mobile number " + customerDto.getMobileNumber());
         }
-        customer.setCreatedAt(LocalDateTime.now());
-        customer.setCreatedBy("Anonymous");
         Customer savedCustomer = customerRepository.save(customer);
         accountsRepository.save(createNewAccount(savedCustomer));
     }
@@ -52,7 +50,7 @@ public class AccountsServiceImpl implements IAccountsService {
      * @throws ResourceNotFoundException if the customer/account is not found
      */
     @Override
-    public CustomerDto fetchAccountDetails(String mobileNumber) {
+    public CustomerDto fetchAccount(String mobileNumber) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer","mobileNumber",mobileNumber));
 
@@ -80,8 +78,6 @@ public class AccountsServiceImpl implements IAccountsService {
         newAccount.setAccountNumber(randomAccNumber);
         newAccount.setAccountType(AccountsConstants.SAVINGS);
         newAccount.setBranchAddress(AccountsConstants.ADDRESS);
-        newAccount.setCreatedAt(LocalDateTime.now());
-        newAccount.setCreatedBy("Anonymous");
         return newAccount;
     }
 
@@ -92,7 +88,7 @@ public class AccountsServiceImpl implements IAccountsService {
      * @return true if the account details are updated successfully, otherwise false
      */
     @Override
-    public boolean updateAccountDetails(CustomerDto customerDto) {
+    public boolean updateAccount(CustomerDto customerDto) {
         boolean isUpdated = false;
         AccountsDto accountsDto = customerDto.getAccountsDto();
         if(accountsDto !=null ){

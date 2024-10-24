@@ -19,7 +19,7 @@ public interface IAccountsService {
      * @param mobileNumber the mobile number to fetch the account details for
      * @return the account details for the customer
      */
-    CustomerDto fetchAccountDetails(String mobileNumber);
+    CustomerDto fetchAccount(String mobileNumber);
 
 
     /**
@@ -28,7 +28,7 @@ public interface IAccountsService {
      * @param customerDto the customer information to update the account details from
      * @return true if the account details are updated successfully, otherwise false
      */
-    boolean updateAccountDetails(CustomerDto customerDto);
+    boolean updateAccount(CustomerDto customerDto);
 
     /**
      * Deletes the account details for the customer with the given mobile number.

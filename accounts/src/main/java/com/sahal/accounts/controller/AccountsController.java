@@ -49,7 +49,7 @@ public class AccountsController {
     public ResponseEntity<CustomerDto> fetchAccountDetails(@RequestParam
                                                                @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
                                                                String mobileNumber) {
-        CustomerDto customerDto = iAccountsService.fetchAccountDetails(mobileNumber);
+        CustomerDto customerDto = iAccountsService.fetchAccount(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(customerDto);
     }
@@ -63,7 +63,7 @@ public class AccountsController {
      */
     @PutMapping("/update")
     public ResponseEntity<ResponseDto> updateAccountDetails(@Valid @RequestBody CustomerDto customerDto) {
-        boolean isUpdated = iAccountsService.updateAccountDetails(customerDto);
+        boolean isUpdated = iAccountsService.updateAccount(customerDto);
         if(isUpdated) {
             return ResponseEntity
                     .status(HttpStatus.OK)

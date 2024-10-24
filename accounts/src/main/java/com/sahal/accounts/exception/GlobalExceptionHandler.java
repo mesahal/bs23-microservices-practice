@@ -21,26 +21,10 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
-    /**
-     * Handle validation errors for the request body of a controller method.
-     *
-     * @param ex      the exception raised by Spring
-     * @param headers the HTTP headers
-     * @param status  the HTTP status code
-     * @param request the web request
-     * @return a response with the validation errors
-     */
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
-    /**
-     * Handles any uncaught exception and returns a HTTP 500 error with a JSON response
-     * containing the error message and timestamp.
-     *
-     * @param exception the exception to be handled
-     * @param webRequest the web request being processed
-     * @return a ResponseEntity containing the error response
-     */
+
         Map<String, String> validationErrors = new HashMap<>();
         List<ObjectError> validationErrorList = ex.getBindingResult().getAllErrors();
 
@@ -52,14 +36,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(validationErrors, HttpStatus.BAD_REQUEST);
     }
 
-    /**
-     * Handles any uncaught exception and returns a HTTP 500 error with a JSON response
-     * containing the error message and timestamp.
-     *
-     * @param exception the exception to be handled
-     * @param webRequest the web request being processed
-     * @return a ResponseEntity containing the error response
-     */
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponseDto> handleGlobalException(Exception exception,
                                                                   WebRequest webRequest) {
@@ -72,14 +48,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errorResponseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    /**
-     * Handles {@link CustomerAlreadyExistException} exceptions by returning a 400 BAD REQUEST
-     * response with an error message indicating that the customer already exists.
-     *
-     * @param exception the exception to be handled
-     * @param webRequest the web request being processed
-     * @return a ResponseEntity containing the error response
-     */
     @ExceptionHandler(CustomerAlreadyExistException.class)
     public ResponseEntity<ErrorResponseDto> handleCustomerAlreadyExistException(CustomerAlreadyExistException exception, WebRequest webRequest) {
 
@@ -93,14 +61,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errorResponseDto, HttpStatus.BAD_REQUEST);
     }
 
-    /**
-     * Handles {@link ResourceNotFoundException} exceptions by returning a 404 NOT FOUND
-     * response with an error message indicating the resource was not found.
-     *
-     * @param exception the exception to be handled
-     * @param webRequest the web request being processed
-     * @return a ResponseEntity containing the error response
-     */
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorResponseDto> handleResourceNotFoundException(ResourceNotFoundException exception, WebRequest webRequest) {
 
