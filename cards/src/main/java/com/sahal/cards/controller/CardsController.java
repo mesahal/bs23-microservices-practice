@@ -25,6 +25,14 @@ public class CardsController {
         return null;
     }
 
+    public ResponseEntity<ResponseDto> updateCard() {
+        return null;
+    }
+
+    public ResponseEntity<ResponseDto> deleteCard() {
+        return null;
+    }
+
 
 
 }
