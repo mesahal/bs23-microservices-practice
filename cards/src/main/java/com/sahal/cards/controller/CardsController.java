@@ -21,6 +21,10 @@ public class CardsController {
     }
 
 
+    public ResponseEntity<ResponseDto> fetchCard() {
+        return null;
+    }
+
 
 
 }
