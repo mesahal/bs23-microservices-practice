@@ -1,9 +1,13 @@
 package com.sahal.cards.controller;
 
+import com.sahal.cards.dto.ErrorResponseDto;
 import com.sahal.cards.dto.ResponseDto;
 import com.sahal.cards.service.ICardsService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
@@ -28,7 +32,7 @@ public class CardsController {
         summary = "Create Card REST API",
         description = "REST API to create new card inside EazyBank"
     )
-    @ApiResponse({
+    @ApiResponses({
         @ApiResponse(
             responseCode = "201",
             description = "HTTP Status CREATED"
