@@ -3,11 +3,13 @@ package com.sahal.cards.controller;
 import com.sahal.cards.dto.ResponseDto;
 import com.sahal.cards.service.ICardsService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +28,21 @@ public class CardsController {
         summary = "Create Card REST API",
         description = "REST API to create new card inside EazyBank"
     )
+    @ApiResponse({
+        @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status CREATED"
+        ),
+        @ApiResponse(
+            responseCode = "500",
+            description = "HTTP Status Internal Server Error",
+            content = @Content(
+                schema = @Schema(implementation = ErrorResponseDto.class)
+            )
+        )
+    }
+    )
+    @PostMapping("/create")
     public ResponseEntity<ResponseDto> createCard() {
         return null;
     }
