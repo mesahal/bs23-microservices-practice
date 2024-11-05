@@ -1,7 +1,10 @@
 package com.sahal.cards.service.Impl;
 
+import com.sahal.cards.constants.CardsConstants;
 import com.sahal.cards.dto.CardsDto;
 import com.sahal.cards.entity.Cards;
+import com.sahal.cards.exeption.CardAlreadyExistsException;
+import com.sahal.cards.exeption.ResourceNotFoundException;
 import com.sahal.cards.mapper.CardsMapper;
 import com.sahal.cards.repository.CardsRepository;
 import com.sahal.cards.service.ICardsService;
@@ -9,6 +12,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 @AllArgsConstructor
