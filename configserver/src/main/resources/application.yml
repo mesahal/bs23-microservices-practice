@@ -7,10 +7,13 @@ spring:
     config:
       server:
         git:
-          uri: "https://github.com/eazybytes/eazybytes-config.git"
+          uri: "https://github.com/mesahal/eazybytes-config.git"
           default-label: main
           timeout: 5
           clone-on-start: true
           force-pull: true
+
+encrypt:
+  key: "KJFDWS8FW9FHNW34UR98RHW2982302FRW"
 server:
   port: 8071
