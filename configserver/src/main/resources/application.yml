@@ -22,7 +22,15 @@ management:
     web:
       exposure:
         include: "*"
-
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
 encrypt:
   key: "KJFDWS8FW9FHNW34UR98RHW2982302FRW"
 server:
