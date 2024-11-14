@@ -36,3 +36,11 @@ Stores the identifier (user or system) of the last modifier, updated automatical
 Configures column properties for the field in the database:
 - **updatable = false**: Field is set only during creation, not updated afterward.
 - **insertable = false**: Field is updated only, not set during the initial creation.
+
+
+## Architecture Type
+There are 3 types of 
+### Monolith 
+![Architecture Diagram](/note-images/Monolith%20Overview.png)
+![Architecture Diagram](/note-images/Monolith%20Pros%20&%20Cons.png)
+
