@@ -44,3 +44,10 @@ There are 3 types of
 ![Architecture Diagram](/note-images/Monolith%20Overview.png)
 ![Architecture Diagram](/note-images/Monolith%20Pros%20&%20Cons.png)
 
+### SOA (Service Oriented Architecture)
+![Architecture Diagram](/note-images/SOA%20Overview.png)
+![Architecture Diagram](/note-images/SOA%20Pros%20&%20Cons.png)
+
+### Microservices 
+![Architecture Diagram](/note-images/Microservice%20Overview.png)
+![Architecture Diagram](/note-images/Microservice%20Pros%20&%20Cons.png)
