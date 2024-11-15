@@ -26,6 +26,13 @@ There are 3 types of
 Using Spring Boot framework
 ![Architecture Diagram](/note-images/Spring%20Boot%20Advantage.png)
 
+### Rest Service Standards
+![Architecture Diagram](/note-images/Rest%20Standards.png)
+
+### Creating Spring Boot Project
+Dependencies needed : Spring Boot Actuator, Spring web, Spring Data JPA, Spring Boot DevTools, 
+H2 Database, Lombok, Validation
+
 
 
 ## Annotations Explained
