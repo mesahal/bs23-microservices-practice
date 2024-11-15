@@ -1,7 +1,32 @@
-# Our Goal
+## Our Goal In This Course
 ![Architecture Diagram](/note-images/Architecture.png)
-
 ---
+
+## Architecture Type
+There are 3 types of 
+### Monolith 
+![Architecture Diagram](/note-images/Monolith%20Overview.png)
+![Architecture Diagram](/note-images/Monolith%20Pros%20&%20Cons.png)
+
+### SOA (Service Oriented Architecture)
+![Architecture Diagram](/note-images/SOA%20Overview.png)
+![Architecture Diagram](/note-images/SOA%20Pros%20&%20Cons.png)
+
+### Microservices 
+![Architecture Diagram](/note-images/Microservice%20Overview.png)
+![Architecture Diagram](/note-images/Microservice%20Pros%20&%20Cons.png)
+
+### Comparisons between Monolithic SOA Microservices architecture
+![Architecture Diagram](/note-images/Architecture%20Comparison.png)
+
+### Microservices definition
+![Architecture Diagram](/note-images/MIcroservice%20Definition.png)
+
+### How to Build Microservice
+Using Spring Boot framework
+![Architecture Diagram](/note-images/Spring%20Boot%20Advantage.png)
+
+
 
 ## Annotations Explained
 
@@ -37,17 +62,3 @@ Configures column properties for the field in the database:
 - **updatable = false**: Field is set only during creation, not updated afterward.
 - **insertable = false**: Field is updated only, not set during the initial creation.
 
-
-## Architecture Type
-There are 3 types of 
-### Monolith 
-![Architecture Diagram](/note-images/Monolith%20Overview.png)
-![Architecture Diagram](/note-images/Monolith%20Pros%20&%20Cons.png)
-
-### SOA (Service Oriented Architecture)
-![Architecture Diagram](/note-images/SOA%20Overview.png)
-![Architecture Diagram](/note-images/SOA%20Pros%20&%20Cons.png)
-
-### Microservices 
-![Architecture Diagram](/note-images/Microservice%20Overview.png)
-![Architecture Diagram](/note-images/Microservice%20Pros%20&%20Cons.png)
