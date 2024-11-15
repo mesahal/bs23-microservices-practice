@@ -19,20 +19,29 @@ There are 3 types of
 ### Comparisons between Monolithic SOA Microservices architecture
 ![Architecture Diagram](/note-images/Architecture%20Comparison.png)
 
-### Microservices definition
+## Microservices definition
 ![Architecture Diagram](/note-images/MIcroservice%20Definition.png)
 
-### How to Build Microservice
+## How to Build Microservice
 Using Spring Boot framework
 ![Architecture Diagram](/note-images/Spring%20Boot%20Advantage.png)
 
-### Rest Service Standards
+## Rest Service Standards
 ![Architecture Diagram](/note-images/Rest%20Standards.png)
 
-### Creating Spring Boot Project
+## Creating Spring Boot Project
 Dependencies needed : Spring Boot Actuator, Spring web, Spring Data JPA, Spring Boot DevTools, 
 H2 Database, Lombok, Validation
 
+## Plugins 
+
+
+
+## Table Creation
+use IF NOT EXISTS so that if table is not created then only table will be created
+
+## Project Structure
+![Architecture Diagram](/note-images/Project%20Structure.png)
 
 
 ## Annotations Explained
