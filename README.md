@@ -43,6 +43,8 @@ use IF NOT EXISTS so that if table is not created then only table will be create
 ## Project Structure
 ![Architecture Diagram](/note-images/Project%20Structure.png)
 
+## Entity
+
 ## DTO Pattern
 ![Architecture Diagram](/note-images/DTO%20Pattern.png)
 
@@ -102,14 +104,23 @@ public class ErrorResponseDto {
 ## Mapper
 Libraries: Model mapper, Mapstruct
 
+## 
+
+## Constants
+
 ## Exception Handling
+
+## Controller
+
+## Service
+
+## Repository
 
 
 
 
 
 ## Annotations Explained
-
 #### @MappedSuperclass
 Marks the class as a base class for entity inheritance, without creating a separate database table for it.
 
@@ -141,4 +152,3 @@ Stores the identifier (user or system) of the last modifier, updated automatical
 Configures column properties for the field in the database:
 - **updatable = false**: Field is set only during creation, not updated afterward.
 - **insertable = false**: Field is updated only, not set during the initial creation.
-
