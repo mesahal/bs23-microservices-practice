@@ -99,7 +99,11 @@ public class ErrorResponseDto {
     private LocalDateTime errorTime;
 }
 ```
-## 
+## Mapper
+Libraries: Model mapper, Mapstruct
+
+## Exception Handling
+
 
 
 
