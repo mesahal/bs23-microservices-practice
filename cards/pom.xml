@@ -92,7 +92,7 @@
                 <version>3.4.2</version>
                 <configuration>
                     <to>
-                        <image>sahal2000/${project.artifactId}:s4</image>
+                        <image>sahal2000/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>
