@@ -3,11 +3,21 @@ spring:
     name: "gatewayserver"
   config:
     import: "optional:configserver:http://localhost:8071/"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    gateway:
+      access: unrestricted
   info:
     env:
       enabled: true
@@ -15,5 +25,11 @@ management:
 info:
   app:
     name: "gatewayserver"
-    description: "Sahal Bank Gateway Server Application"
+    description: "Eazy Bank Gateway Server Application"
     version: "1.0.0"
+
+#logging:
+#  level:
+#    com:
+#      eazybytes:
+#        gatewayserver: DEBUG
