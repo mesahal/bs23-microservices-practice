@@ -11,4 +11,5 @@ public interface LoansFeignClient {
 
     @GetMapping(value = "/api/fetch",consumes = "application/json")
     public ResponseEntity<LoansDto> fetchLoanDetails(@RequestParam String mobileNumber);
+
 }
